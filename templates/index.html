@@ -1,49 +1,98 @@
+<!-- templates/index.html -->
+{% load static %}
 <!DOCTYPE html>
-<html  >
+<html>
 <head>
-  
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:image:src" content="">
-  <meta property="og:image" content="">
-  <meta name="twitter:title" content="Golden Dragon Delivery | Asian Delicacies">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
-  <meta name="description" content="">
-  
-  
-  <title>Golden Dragon Delivery | Asian Delicacies</title>
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/socicon/css/styles.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap"></noscript>
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
-  
-  
-  
-  
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:src" content="">
+    <meta property="og:image" content="">
+    <meta name="twitter:title" content="Golden Dragon Delivery | Asian Delicacies">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="{% static '/static/assets/images/logo5.png' %}" type="image/x-icon">
+    <meta name="description" content="">
+
+
+    <title>Golden Dragon Delivery | Asian Delicacies</title>
+    <link rel="stylesheet" href="/static/assets/web/assets/mobirise-icons2/mobirise2.css">
+    <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="/static/assets/socicon/css/styles.css">
+    <link rel="stylesheet" href="/static/assets/theme/css/style.css">
+    <link rel="preload"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap"
+          as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap">
+    </noscript>
+    <link rel="preload" as="style" href="/static/assets/mobirise/css/mbr-additional.css">
+    <link rel="stylesheet" href="/static/assets/mobirise/css/mbr-additional.css" type="text/css">
+
+    <!-- slider -->
+    <link rel="stylesheet" href="/static/assets/cartslider/style.css">
+
 </head>
 <body>
-  
-  <section data-bs-version="5.1" class="slider1 cid-tDbZ6tArCd" id="slider1-x">
-    
+
+
+<header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" style="
+        box-shadow: -6px 4px 19px 0px rgba(34, 60, 80, 0.15); z-index: 20;
+        ">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarExample01" style="display: flex !important;">
+                <ul class="navbar-nav mb-2 mb-lg-0"
+                    style="width: -webkit-fill-available; justify-content: space-between; flex-direction: row !important;">
+                    <li class="nav-item active" style="display: flex; align-items: center;">
+                        <a class="nav-link display-5 mbr-bold" aria-current="page" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item d-flex">
+                        <button type="button" class="btn btn-secondary rounded-pill" onclick="openNav()">
+                            <div class="display-5 mbr-bold">Корзина</div>
+                        </button>
+                    </li><!--
+          <li class="nav-item">
+            <a class="nav-link display-5" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link display-5" href="#">About</a> -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar -->
+</header>
+
+<div id="mySidenav" class="sidenav closed">
+  <div>
+      Тут типа выбранные товары
+      <br>
+      кол-вo <div id="cart_num">0</div>
+  </div>
+</div>
+
+<section data-bs-version="5.1" class="slider1 cid-tDbZ6tArCd" id="slider1-x">
+
     <div class="carousel slide" id="tDyQATkV8f" data-interval="5000" data-bs-interval="5000">
         <ol class="carousel-indicators">
-            <li data-slide-to="0" data-bs-slide-to="0" class="active" data-target="#tDyQATkV8f" data-bs-target="#tDyQATkV8f"></li>
+            <li data-slide-to="0" data-bs-slide-to="0" class="active" data-target="#tDyQATkV8f"
+                data-bs-target="#tDyQATkV8f"></li>
             <li data-slide-to="1" data-bs-slide-to="1" data-target="#tDyQATkV8f" data-bs-target="#tDyQATkV8f"></li>
             <li data-slide-to="2" data-bs-slide-to="2" data-target="#tDyQATkV8f" data-bs-target="#tDyQATkV8f"></li>
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item slider-image item active">
                 <div class="item-wrapper">
-                    <img class="d-block w-100" src="assets/images/background3.jpg" alt="">
-                    
+                    <img class="d-block w-100" src="/static/assets/images/background3.jpg" alt="">
+
                     <div class="carousel-caption">
                         <h5 class="mbr-section-subtitle mbr-fonts-style display-5">
                             <strong>Full-Width Slider</strong>
@@ -54,8 +103,8 @@
             </div>
             <div class="carousel-item slider-image item">
                 <div class="item-wrapper">
-                    <img class="d-block w-100" src="assets/images/background5.jpg" alt="">
-                    
+                    <img class="d-block w-100" src="/static/assets/images/background5.jpg" alt="">
+
                     <div class="carousel-caption">
                         <h5 class="mbr-section-subtitle mbr-fonts-style display-5">
                             <strong>Full-Width Slider</strong>
@@ -66,8 +115,8 @@
             </div>
             <div class="carousel-item slider-image item">
                 <div class="item-wrapper">
-                    <img class="d-block w-100" src="assets/images/background8.jpg" alt="">
-                    
+                    <img class="d-block w-100" src="/static/assets/images/background8.jpg" alt="">
+
                     <div class="carousel-caption">
                         <h5 class="mbr-section-subtitle mbr-fonts-style display-1">
                             <strong>Full-Width Slider</strong>
@@ -77,28 +126,30 @@
                 </div>
             </div>
         </div>
-        <a class="carousel-control carousel-control-prev" role="button" data-slide="prev" data-bs-slide="prev" href="#tDyQATkV8f">
+        <a class="carousel-control carousel-control-prev" role="button" data-slide="prev" data-bs-slide="prev"
+           href="#tDyQATkV8f">
             <span class="mobi-mbri mobi-mbri-arrow-prev" aria-hidden="true"></span>
             <span class="sr-only visually-hidden">Previous</span>
         </a>
-        <a class="carousel-control carousel-control-next" role="button" data-slide="next" data-bs-slide="next" href="#tDyQATkV8f">
+        <a class="carousel-control carousel-control-next" role="button" data-slide="next" data-bs-slide="next"
+           href="#tDyQATkV8f">
             <span class="mobi-mbri mobi-mbri-arrow-next" aria-hidden="true"></span>
             <span class="sr-only visually-hidden">Next</span>
         </a>
     </div>
 </section>
-
+<!--
 <section data-bs-version="5.1" class="header01 carm4_header01 cid-tDbVuM0rz2" id="header01-w">
 
-    
 
-    
+
+
 
     <div class="container">
         <div class="row justify-content-center">
             <div class="mbr-white col-md-12">
                 <div class="wrap">
-                    
+
                     <div class="mask align-center justify-content-center">
                         <div class="wrap-text d-flex">
                             <h1 class="mbr-section-title w-100 price mbr-bold mbr-white pb-lg-4 pb-1 mbr-fonts-style align-center display-1"></h1>
@@ -106,8 +157,8 @@
 <div><br></div></h1>
                         </div>
                     </div>
-                    
-                    
+
+
                 </div>
             </div>
         </div>
@@ -116,26 +167,26 @@
 
 <section data-bs-version="5.1" class="pricing02 dinerm4_pricing02 cid-tDbVtzuPoS" id="pricing02-v">
 
-	
-    
 
 
-	
+
+
+
 	<div class="container">
 		<div class="row">
 
 			<div class="col-md-12 pb-5 col-lg-12 align-center">
-				
-				
+
+
 			</div>
 			<div class="card item features-image col-12 col-md-6">
 				<div class="item-wrapper align-center">
 
 					<div class="card-img">
-						<img src="assets/images/b4facf495c22df52f3ca635379ebe613-14-prev-ui-340x272.png" alt="">
+						<img src="/static/assets/images/b4facf495c22df52f3ca635379ebe613-14-prev-ui-340x272.png" alt="">
 					</div>
 
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
+					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya//static/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
 						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
 						</path>
 					</svg>
@@ -161,10 +212,10 @@
 				<div class="item-wrapper align-center">
 
 					<div class="card-img">
-						<img src="assets/images/5954bcb006b10dbfd0bc160f6370faf3-8-prev-ui-340x227.png" alt="">
+						<img src="/static/assets/images/5954bcb006b10dbfd0bc160f6370faf3-8-prev-ui-340x227.png" alt="">
 					</div>
 
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
+					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya//static/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
 						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
 						</path>
 					</svg>
@@ -186,2806 +237,99 @@
 					</div>
 				</div>
 			</div>
-			
 
 
-			
+
+
 
 
 		</div>
 	</div>
 
 </section>
+ -->
+{% for category in categories %}
+    <section data-bs-version="5.1" class="header01 carm4_header01 cid-tDbPmp1i6X" id="header{{ forloop.counter }}-r">
 
-<section data-bs-version="5.1" class="header01 carm4_header01 cid-tDbPmp1i6X" id="header01-r">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="mbr-white col-md-12">
+                    <div class="wrap">
 
-    
-
-    
-
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="mbr-white col-md-12">
-                <div class="wrap">
-                    
-                    <div class="mask align-center justify-content-center">
-                        <div class="wrap-text d-flex">
-                            <h1 class="mbr-section-title w-100 price mbr-bold mbr-white pb-lg-4 pb-1 mbr-fonts-style align-center display-1"></h1>
-                            <h1 class="mbr-section-title w-100 mbr-bold mbr-white pb-lg-4 pb-1 mbr-fonts-style align-center display-1">Individual Entrees &amp; Sides</h1>
+                        <div class="mask align-center justify-content-center">
+                            <div class="wrap-text d-flex">
+                                <h1 class="mbr-section-title w-100 price mbr-bold mbr-white pb-lg-4 pb-1 mbr-fonts-style align-center display-1"></h1>
+                                <h1 class="mbr-section-title w-100 mbr-bold mbr-white pb-lg-4 pb-1 mbr-fonts-style align-center display-1">
+                                    {{ category.name }}</h1>
+                            </div>
                         </div>
+
+
                     </div>
-                    
-                    
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section data-bs-version="5.1" class="pricing02 dinerm4_pricing02 cid-tD5cuP0iZV" id="pricing02-7">
+    <section data-bs-version="5.1" class="pricing02 dinerm4_pricing02 cid-tD5cuP0iZV"
+             id="pricing{{ forloop.counter }}-7">
 
-	
-    
 
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 pb-5 col-lg-12 align-center">
 
-	
-	<div class="container">
-		<div class="row">
 
-			<div class="col-md-12 pb-5 col-lg-12 align-center">
-				
-				
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
+                </div>
+                {% for product in category.products.all %}
+                    <div class="card item features-image col-12 col-md-6 col-lg-3">
+                        <div class="item-wrapper align-center">
 
-					<div class="card-img">
-						<img src="assets/images/image-removebg-preview-1.png" alt="2">
-					</div>
+                            <div class="card-img">
+                                <img src="media/{{ product.image }}" alt="2">
+                            </div>
 
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1"
+                                 viewBox="0 0 254.99 483.96" class="product-shape-hover-img"
+                                 src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya//static/assets/images/menu_shape_hover.svg"
+                                 alt="Quarter Onion">
+                                <path stroke="lightgray"
+                                      d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
+                                </path>
+                            </svg>
 
-					<div class="card-box pt-4">
+                            <div class="card-box pt-4">
 
 
+                                <h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">{{ product.title }}</h4>
+                                <p class="mbr-text mbr-semibold mbr-fonts-style display-7">{{ product.description }}<br>
+                                </p>
 
+                                <h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">{{ product.amount }} {{ product.currency }}</h5>
 
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Sizzling Shrimp</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Tender shrimp, seared with sizzle. Served hot with flavorful seasoning. A dish that awakens your taste buds.<br></p>
 
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 7.10</h5>
+                                <span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
 
 
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/image-removebg-preview-2.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Broccoli Beef</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Tender beef stir-fried with green broccoli. A classic dish with a satisfying texture and savory flavors.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 5.40</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/fc90cecc-2227-4de3-983d-dbe5b7093c7a-removebg-preview.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Sweet Fire Chicken Breast</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Tender chicken glazed with a perfect blend of sweet and spicy flavors. A deliciously bold and satisfying dish.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 5.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/image-removebg-preview-4.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Black Pepper Angus Steak</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Juicy Angus steak strips with a bold black pepper seasoning. A flavorful and satisfying choice.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 7.20</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-		</div>
-	</div>
-
-</section>
-
-<section data-bs-version="5.1" class="pricing02 dinerm4_pricing02 cid-tD5cu6Of5A" id="pricing02-6">
-
-	
-    
-
-
-	
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-12 pb-5 col-lg-12 align-center">
-				
-				
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/fce51c0b-f574-4d6d-98c5-4af7e0f1a45f-removebg-preview.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Honey chicken breast</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Sweet and savory flavors combined to perfection. Tender chicken with a crispy sesame coating. Delicious.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 4.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/b175bedd-2159-4d08-8f5a-1a61be85776c-removebg-preview.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Beijing Beef</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Tender strips of beef in a sweet and spicy sauce, topped with sesame seeds. A delicious fusion of flavors.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 6.30</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/15b1f3f7-1383-493a-b037-e9c08d2921a0-removebg-preview.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Kung Pao Chicken</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Spicy stir-fried chicken with peanuts and veggies. A classic dish with bold flavors and satisfying crunch.</p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 4.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/image-removebg-preview.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Beijing Beef</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Tender strips of beef, wok-seared with sweet peppers and onions in a savory sauce. A bold and delicious Chinese.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 4.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-		</div>
-	</div>
-
-</section>
-
-<section data-bs-version="5.1" class="pricing02 dinerm4_pricing02 cid-tD5iLmToZq" id="pricing02-8">
-
-	
-    
-
-
-	
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-12 pb-5 col-lg-12 align-center">
-				
-				
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/image-removebg-preview-5.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Black Pepper Chicken</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Tender chicken wok-tossed with onions and peppers in a bold black pepper sauce. Savory and satisfying.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 5.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/image-photoroom.png-photoroom-2.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Fried Rice</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Perfectly cooked grains with veggies and meats. A delicious and satisfying side dish.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 5.30</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/image-photoroom.png-photoroom-3.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Bean Chicken Breast</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Tender chicken and crisp string beans in a savory sauce. A delicious and nutritious option with great flavors.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 5.30</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/image-photoroom.png-photoroom-4.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Super Greens</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Tender broccoli florets sautéed with nutrient-rich super greens. A healthy and delicious side dish.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 3.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-		</div>
-	</div>
-
-</section>
-
-<section data-bs-version="5.1" class="pricing02 dinerm4_pricing02 cid-tD52aTmc65" id="pricing02-2">
-
-	
-    
-
-
-	
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-12 pb-5 col-lg-12 align-center">
-				
-				
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/1c82b861-3167-44c8-b753-7695189f6259-transformed.png" alt="2">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Chow Mein</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Stir-fried noodles, savory veggies, tender meat. Classic dish, flavorful and satisfying.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 4.50</h5>
-
-
-						<span class="icon mbr-iconfont mbr-iconfont-btn mobi-mbri-cart-full mobi-mbri" style="color: rgb(255, 255, 255); fill: rgb(255, 255, 255);"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/2d69572d-7d9d-4fff-b43f-64564cd075f9-transformed.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Fried Rice</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Golden grains of rice tossed with savory meats and vegetables. A flavorful and comforting classic dish.</p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 4.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/98bf937d-590b-4a4f-a816-4cbbb2297abc-transformed.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Original Orange Chicken</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Crispy chicken bites tossed in tangy citrus sauce. A crowd-pleaser with a perfect balance of sweet and savory.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 6.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/6050049b-c9c3-4aa4-a0ca-901d7ec52613-transformed.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Honey Walnut Shrimp</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Crispy shrimp, glazed with honey and topped with candied walnuts. A mouthwatering combination.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 7.20</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-		</div>
-	</div>
-
-</section>
-
-<section data-bs-version="5.1" class="header01 carm4_header01 cid-tDbPeu5Tkz" id="header01-q">
-
-    
-
-    
-
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="mbr-white col-md-12">
-                <div class="wrap">
-                    
-                    <div class="mask align-center justify-content-center">
-                        <div class="wrap-text d-flex">
-                            <h1 class="mbr-section-title w-100 price mbr-bold mbr-white pb-lg-4 pb-1 mbr-fonts-style align-center display-1"></h1>
-                            <h1 class="mbr-section-title w-100 mbr-bold mbr-white pb-lg-4 pb-1 mbr-fonts-style align-center display-1">Combos Sea Boil</h1>
+                            </div>
                         </div>
                     </div>
-                    
-                    
-                </div>
+                {% endfor %}
             </div>
         </div>
-    </div>
-</section>
 
-<section data-bs-version="5.1" class="pricing02 dinerm4_pricing02 cid-tDb8TGCuOj" id="pricing02-h">
+    </section>
 
-	
-    
-
-
-	
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-12 pb-5 col-lg-12 align-center">
-				
-				
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/4218ca1d09174218364162cd0b1a8cc1-photoroom.png-photoroom-340x227.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Jumbo Shaker</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">&nbsp;Snow Crab Legs and Shrimp served with&nbsp; of house sauce.&nbsp;<br><br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 30.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/4218ca1d09174218364162cd0b1a8cc1-1-photoroom.png-photoroom-340x227.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Fried Rice</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Snow Crab, Lobster Tail, and Shrimp served in&nbsp; of house sauce with corn and potatoes.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 39.80</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/4218ca1d09174218364162cd0b1a8cc1-2-photoroom.png-photoroom-340x227.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Be Shellfish</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Shrimp, Crawfish, and Mussels served in&nbsp; house sauce with corn and potatoes.&nbsp;<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 25.60</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/4218ca1d09174218364162cd0b1a8cc1-3-photoroom.png-photoroom-340x227.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Seafood Galore</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Snow Crab, Shrimp, Crawfish and Clams served in house sauce with corn and potatoes.&nbsp;<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 35.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-		</div>
-	</div>
-
-</section>
-
-<section data-bs-version="5.1" class="header01 carm4_header01 cid-tDbORuC5un" id="header01-p">
-
-    
-
-    
-
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="mbr-white col-md-12">
-                <div class="wrap">
-                    
-                    <div class="mask align-center justify-content-center">
-                        <div class="wrap-text d-flex">
-                            <h1 class="mbr-section-title w-100 price mbr-bold mbr-white pb-lg-4 pb-1 mbr-fonts-style align-center display-1"></h1>
-                            <h1 class="mbr-section-title w-100 mbr-bold mbr-white pb-lg-4 pb-1 mbr-fonts-style align-center display-1">Shaking Sea Boils</h1>
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="pricing02 dinerm4_pricing02 cid-tDblAYT1H3" id="pricing02-i">
-
-	
-    
-
-
-	
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-12 pb-5 col-lg-12 align-center">
-				
-				
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/5954bcb006b10dbfd0bc160f6370faf3-1-removebg-preview-340x272.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Easy-Peel Shrimp</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">These easy peel shrimp are de-veined and have the back of their shells open. More Flavor, Less Mess.&nbsp;<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 18.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/b4facf495c22df52f3ca635379ebe613-photoroom.png-photoroom-340x272.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Snow Crab Legs</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">It has a subtle, salty taste. The texture of the crab is firm and fibrous and can be easily broken into pieces.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 27.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/4218ca1d09174218364162cd0b1a8cc1-4-photoroom.png-photoroom-340x227.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Head-On Shrimp</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Peel &amp; Eat Shrimp served head-on. We source only large shrimp to give you the most meat for your peel.&nbsp;<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 11.30</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/b4facf495c22df52f3ca635379ebe613-1-removebg-preview-340x272.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Crawfish</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">      Served alive , they are plump and soft, with a natural flavor, absorbing all the herbs and spices in our brew.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 17.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-		</div>
-	</div>
-
-</section>
-
-<section data-bs-version="5.1" class="pricing02 dinerm4_pricing02 cid-tDbuRvW8SA" id="pricing02-j">
-
-	
-    
-
-
-	
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-12 pb-5 col-lg-12 align-center">
-				
-				
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/b4facf495c22df52f3ca635379ebe613-2-prev-ui-340x272.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Mussels</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Tender and slightly chewy, has a mild flavor, can take spices and herbs our boil.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 15.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/b4facf495c22df52f3ca635379ebe613-3-prev-ui-340x249.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Clams</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Chewy, plump with a slight saltiness<br><br>&nbsp;<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 10.20</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/b4facf495c22df52f3ca635379ebe613-4-prev-ui-340x228.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Dungeness Crab Clusters</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">A delicacy, these crabs have a delicate aroma, texture and slightly sweet taste.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 25.00</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/b4facf495c22df52f3ca635379ebe613-5-prev-ui-340x227.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Twin Lobster Tails</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Just the tails, and make it two. Don’t worry, we’ll use the claw meat for our lobster rolls.&nbsp;<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 30.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-		</div>
-	</div>
-
-</section>
-
-<section data-bs-version="5.1" class="header01 carm4_header01 cid-tDbMGdVX6h" id="header01-l">
-
-    
-
-    
-
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="mbr-white col-md-12">
-                <div class="wrap">
-                    
-                    <div class="mask align-center justify-content-center">
-                        <div class="wrap-text d-flex">
-                            <h1 class="mbr-section-title w-100 price mbr-bold mbr-white pb-lg-4 pb-1 mbr-fonts-style align-center display-1"></h1>
-                            <h1 class="mbr-section-title w-100 mbr-bold mbr-white pb-lg-4 pb-1 mbr-fonts-style align-center display-1">Starters</h1>
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="pricing02 dinerm4_pricing02 cid-tDbySeEmwU" id="pricing02-k">
-
-	
-    
-
-
-	
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-12 pb-5 col-lg-12 align-center">
-				
-				
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/b4facf495c22df52f3ca635379ebe613-6-prev-ui-340x227.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Fried Corn</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Corn on the Cob deep fried and basted with our house Cajun butter.&nbsp;<br><br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 5.00</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/b4facf495c22df52f3ca635379ebe613-7-prev-ui-340x227.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Chicken Wings</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Fried chicken wings served with your choice of sauce. Eight pieces.<br>&nbsp;<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 10.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/b4facf495c22df52f3ca635379ebe613-8-prev-ui-340x227.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Spicy Calamari</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Deep Fried Calamari with a mild spice, tossed with banana peppers and a spicy aioli dipping sauce.&nbsp;<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 13.30</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/5954bcb006b10dbfd0bc160f6370faf3-3-prev-ui-340x227.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Fries</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Just potato Fries<br><br><br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 4.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-		</div>
-	</div>
-
-</section>
-
-<section data-bs-version="5.1" class="header01 carm4_header01 cid-tDbQ5QRLTo" id="header01-t">
-
-    
-
-    
-
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="mbr-white col-md-12">
-                <div class="wrap">
-                    
-                    <div class="mask align-center justify-content-center">
-                        <div class="wrap-text d-flex">
-                            <h1 class="mbr-section-title w-100 price mbr-bold mbr-white pb-lg-4 pb-1 mbr-fonts-style align-center display-1"></h1>
-                            <h1 class="mbr-section-title w-100 mbr-bold mbr-white pb-lg-4 pb-1 mbr-fonts-style align-center display-1">Baskets</h1>
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="pricing02 dinerm4_pricing02 cid-tDbQ4M64YI" id="pricing02-s">
-
-	
-    
-
-
-	
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-12 pb-5 col-lg-12 align-center">
-				
-				
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/b4facf495c22df52f3ca635379ebe613-9-prev-ui-340x239.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Classic Lobster Roll</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Has a base of mayonnaise, celery, chives for spiciness, citrus mixture for freshness. Served on a toasted roll.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 25.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/b4facf495c22df52f3ca635379ebe613-10-prev-ui-340x227.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Fried Lobster Tail Basket</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">A lobster tail, hand-battered and fried to perfection.<br>&nbsp;<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 20.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/b4facf495c22df52f3ca635379ebe613-11-prev-ui-340x240.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Bean Chicken Breast</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Fresh catfish is moist, sweet with a firm flesh and less flake, hand-battered and fried to perfection&nbsp;<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 13.00</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/b4facf495c22df52f3ca635379ebe613-12-prev-ui-340x227.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Fried Chicken Sandwich</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Southern fried chicken sandwich with Cajun spices, mayo, and just enough pickles. Served with fries.&nbsp;<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 12.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-		</div>
-	</div>
-
-</section>
-
-<section data-bs-version="5.1" class="header01 carm4_header01 cid-tDbODK2HcA" id="header01-o">
-
-    
-
-    
-
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="mbr-white col-md-12">
-                <div class="wrap">
-                    
-                    <div class="mask align-center justify-content-center">
-                        <div class="wrap-text d-flex">
-                            <h1 class="mbr-section-title w-100 price mbr-bold mbr-white pb-lg-4 pb-1 mbr-fonts-style align-center display-1"></h1>
-                            <h1 class="mbr-section-title w-100 mbr-bold mbr-white pb-lg-4 pb-1 mbr-fonts-style align-center display-1">Rise</h1>
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="pricing02 dinerm4_pricing02 cid-tD7rreoJHP" id="pricing02-9">
-
-	
-    
-
-
-	
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-12 pb-5 col-lg-12 align-center">
-				
-				
-			</div>
-			<div class="card item features-image col-12 col-md-6">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/image-photoroom.png-photoroom-5.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">White Steamed Rice</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Fluffy and tender steamed rice, the perfect accompaniment to any dish. Simple yet delicious.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 2.30</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/image-photoroom.png-photoroom-6.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Brown Steamed Rice</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Perfectly cooked grains with veggies and meats. A delicious and satisfying side dish.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 2.30</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			
-
-
-			
-
-
-		</div>
-	</div>
-
-</section>
-
-<section data-bs-version="5.1" class="header01 carm4_header01 cid-tDdakEoEao" id="header01-16">
-
-    
-
-    
-
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="mbr-white col-md-12">
-                <div class="wrap">
-                    
-                    <div class="mask align-center justify-content-center">
-                        <div class="wrap-text d-flex">
-                            <h1 class="mbr-section-title w-100 price mbr-bold mbr-white pb-lg-4 pb-1 mbr-fonts-style align-center display-1"></h1>
-                            <h1 class="mbr-section-title w-100 mbr-bold mbr-white pb-lg-4 pb-1 mbr-fonts-style align-center display-1">Soup</h1>
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="pricing02 dinerm4_pricing02 cid-tDdalMLzHK" id="pricing02-17">
-
-	
-    
-
-
-	
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-12 pb-5 col-lg-12 align-center">
-				
-				
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/d6b96ae9-b0d8-43e7-8968-46a59ddd3b43-prev-ui-340x272.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Spicy Lemongrass Soup | Tom Yum</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Spicy and citrusy soup with aromatic lemongrass. A delicious Thai classic.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 6.20</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/4218ca1d09174218364162cd0b1a8cc1-6-prev-ui-340x272.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Wonton Soup</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Marinated pork mixed shrimp in wontons, and baby bok choy and your choice of protein.&nbsp;<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 7.30</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/4218ca1d09174218364162cd0b1a8cc1-7-prev-ui-340x272.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Coconut Galangal Soup | Tom Kha</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">"Rich, creamy soup with coconut and Thai spices. <br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 6.30</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/1b9ff4ca-0bda-4a4a-8ebd-c129a60ebf93-prev-ui-340x272.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Tofu Soup</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Gluten Free. Tofu and baby bok choy and your choice of protein.<br>&nbsp;<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 6.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-		</div>
-	</div>
-
-</section>
-
-<section data-bs-version="5.1" class="header01 carm4_header01 cid-tDbOmGSEep" id="header01-n">
-
-    
-
-    
-
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="mbr-white col-md-12">
-                <div class="wrap">
-                    
-                    <div class="mask align-center justify-content-center">
-                        <div class="wrap-text d-flex">
-                            <h1 class="mbr-section-title w-100 price mbr-bold mbr-white pb-lg-4 pb-1 mbr-fonts-style align-center display-1"></h1>
-                            <h1 class="mbr-section-title w-100 mbr-bold mbr-white pb-lg-4 pb-1 mbr-fonts-style align-center display-1">
-<div>Appetizers And More</div></h1>
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="pricing02 dinerm4_pricing02 cid-tD7sodppJN" id="pricing02-a">
-
-	
-    
-
-
-	
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-12 pb-5 col-lg-12 align-center">
-				
-				
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-4">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/image-photoroom.png-photoroom-7.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Cream Cheese Rangoon</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Crispy wonton shells stuffed with creamy filling. Perfectly balanced flavors of sweet and savory.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 1.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-4">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/image-photoroom.png-photoroom-8.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Veggie Spring Roll</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Perfectly cooked grains with veggies and meats. A delicious and satisfying side dish.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 2.30</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-4">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/image-photoroom.png-photoroom-9.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Chicken Egg Roll</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Golden crispy shell filled with savory chicken and vegetables. Satisfying and flavorful appetizer.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 2.30</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-			
-
-
-		</div>
-	</div>
-
-</section>
-
-<section data-bs-version="5.1" class="pricing02 dinerm4_pricing02 cid-tDbUfRuobT" id="pricing02-u">
-
-	
-    
-
-
-	
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-12 pb-5 col-lg-12 align-center">
-				
-				
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-4">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/b4facf495c22df52f3ca635379ebe613-13-prev-ui-340x270.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Black Pepper Chicken</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Tender chicken wok-tossed with onions and peppers in a bold black pepper sauce. Savory and satisfying.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 6.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-4">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/5954bcb006b10dbfd0bc160f6370faf3-6-prev-ui-340x272.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Clam Chowder Soup</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">A New England classic.<br><br>&nbsp;<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 6.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-4">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/5954bcb006b10dbfd0bc160f6370faf3-7-prev-ui-340x234.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Garlic Noodle</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Thick egg noodles stir fried in garlicky butter.<br>&nbsp;<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 6.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-			
-
-
-		</div>
-	</div>
-
-</section>
-
-<section data-bs-version="5.1" class="header01 carm4_header01 cid-tDcH0BiOOW" id="header01-z">
-
-    
-
-    
-
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="mbr-white col-md-12">
-                <div class="wrap">
-                    
-                    <div class="mask align-center justify-content-center">
-                        <div class="wrap-text d-flex">
-                            <h1 class="mbr-section-title w-100 price mbr-bold mbr-white pb-lg-4 pb-1 mbr-fonts-style align-center display-1"></h1>
-                            <h1 class="mbr-section-title w-100 mbr-bold mbr-white pb-lg-4 pb-1 mbr-fonts-style align-center display-1">Cakes</h1>
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="pricing02 dinerm4_pricing02 cid-tDcGYB4wyK" id="pricing02-y">
-
-	
-    
-
-
-	
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-12 pb-5 col-lg-12 align-center">
-				
-				
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/d2e4fe5b-f1d3-4463-a55a-999ed21401f6-prev-ui-340x227.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Birthday Cake Slice<br></h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Our bestselling. Indulgent cake slice with layers of creamy frosting and sprinkles. A celebration in every bite!<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 8.10</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/5954bcb006b10dbfd0bc160f6370faf3-9-prev-ui-340x227.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Red Velvet Slice</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Indulgent layers of rich cheesecake and moist red velvet cake. A heavenly slice of decadence.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 8.10</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/5954bcb006b10dbfd0bc160f6370faf3-10-removebg-preview-340x227.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Muffin Cake Slice</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Moist and fluffy cake slice with bursts of sweet blueberries. Perfectly paired with a hot beverage.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 8.10</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/4a734363-4c70-4845-9da4-fc08d40b8aad-prev-ui-340x227.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Birthday Cake Slice</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Indulge in layers of rich chocolate cake and creamy frosting. The perfect dessert to celebrate any occasion.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 8.10</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-		</div>
-	</div>
-
-</section>
-
-<section data-bs-version="5.1" class="pricing02 dinerm4_pricing02 cid-tDcOPWbEKg" id="pricing02-10">
-
-	
-    
-
-
-	
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-12 pb-5 col-lg-12 align-center">
-				
-				
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/938bacdb-fccb-430e-88f5-ee5c7ca1a24c-prev-ui-340x227.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Birthday Cake</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Celebrate the holidays with our cake. Fluffy cake and creamy frosting turn every day into a holiday.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 60.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/5954bcb006b10dbfd0bc160f6370faf3-11-prev-ui-340x227.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Red Velvet</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Perfectly cooked grains with veggies and meats. A delicious and satisfying side dish.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 60.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/5954bcb006b10dbfd0bc160f6370faf3-12-prev-ui-340x227.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Muffin Cake</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Indulge in a fluffy, moist cake bursting with juicy blueberries. A delightful treat for any time of day.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$60.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/6c166fbb-ef17-49a7-9daa-7aa874468711-prev-ui-340x227.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Birthday Cake</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Delicate chocolate layers and creamy frosting. A rich treat, perfect for any celebration.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 60.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-		</div>
-	</div>
-
-</section>
-
-<section data-bs-version="5.1" class="header01 carm4_header01 cid-tDbOiysF2W" id="header01-m">
-
-    
-
-    
-
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="mbr-white col-md-12">
-                <div class="wrap">
-                    
-                    <div class="mask align-center justify-content-center">
-                        <div class="wrap-text d-flex">
-                            <h1 class="mbr-section-title w-100 price mbr-bold mbr-white pb-lg-4 pb-1 mbr-fonts-style align-center display-1"></h1>
-                            <h1 class="mbr-section-title w-100 mbr-bold mbr-white pb-lg-4 pb-1 mbr-fonts-style align-center display-1">Drinks</h1>
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="pricing02 dinerm4_pricing02 cid-tD7tUOwvef" id="pricing02-b">
-
-	
-    
-
-
-	
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-12 pb-5 col-lg-12 align-center">
-				
-				
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/jp-340-500x-photoroom-photoroom.png.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Blueberry Ramune</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Japanese Soda, 6.6 fl oz (200 ml)<br><br><br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 1.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/jp-346-500x-photoroom-photoroom.png.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Strawberry Ramune</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Japanese Soda, 6.6 fl oz (200 ml)<br><br><br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 1.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/image-photoroom.png-photoroom-10.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Melon Ramune</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Japanese Soda, 6.6 fl oz (200 ml)<br><br><br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 1.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/image-photoroom.png-photoroom-11.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Watermelon Ramune</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Japanese Soda, 6.6 fl oz (200 ml)<br><br><br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 1.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-		</div>
-	</div>
-
-</section>
-
-<section data-bs-version="5.1" class="pricing02 dinerm4_pricing02 cid-tD7C0YTTnx" id="pricing02-d">
-
-	
-    
-
-
-	
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-12 pb-5 col-lg-12 align-center">
-				
-				
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/image-photoroom.png-photoroom-12.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Orange Ramune</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Japanese Soda, 6.6 fl oz (200 ml)&nbsp;<br><br><br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 1.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/image-photoroom.png-photoroom-13.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Kiwi Ramune</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Japanese Soda, 6.6 fl oz (200 ml)<br><br><br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 1.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/image-photoroom.png-photoroom-14.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Yuzu Ramune</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Japanese Soda, 6.6 fl oz (200 ml)<br><br><br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 1.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/image-photoroom.png-photoroom-15.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Original Ramune</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Japanese Soda, 6.6 fl oz (200 ml)<br><br><br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 1.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-		</div>
-	</div>
-
-</section>
-
-<section data-bs-version="5.1" class="pricing02 dinerm4_pricing02 cid-tDcSvqqj0t" id="pricing02-12">
-
-	
-    
-
-
-	
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-12 pb-5 col-lg-12 align-center">
-				
-				
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/coke-soda-q13q2x2-600-prev-ui-340x340.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">&nbsp;Coca-Cola</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Fizzy, refreshing and classic. A perfect beverage to pair with any meal or enjoy on its own.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 1.85</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/s908796439909459820-p22-i1-w820-prev-ui-340x222.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Sprite</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Refreshing and bubbly, with a zesty twist. The perfect thirst-quencher for any occasion.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 1.85</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/g03-prev-ui-340x340.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Fanta Strawberry</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">A refreshing and fruity drink with a sweet strawberry flavor. The perfect accompaniment to any meal.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 1.85</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/213-2132309-free-png-7up-can-png-images-transparent-7-prev-ui-340x194.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">7up</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">A refreshing carbonated drink with a lemon-lime flavor. Perfectly quenches thirst and brightens up the day.<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 1.85</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-		</div>
-	</div>
-
-</section>
-
-<section data-bs-version="5.1" class="pricing02 dinerm4_pricing02 cid-tDcWAPDWeP" id="pricing02-15">
-
-	
-    
-
-
-	
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-12 pb-5 col-lg-12 align-center">
-				
-				
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/4218ca1d09174218364162cd0b1a8cc1-5-prev-ui-340x272.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Fiji&nbsp;</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Natural Artesian Water (23.7 fl oz)<br><br><br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 2.49</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/5954bcb006b10dbfd0bc160f6370faf3-13-prev-ui-340x340.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Fiji&nbsp;</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Natural Artesian Water (1.5 L)<br><br><br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 4.49</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/5954bcb006b10dbfd0bc160f6370faf3-14-prev-ui-340x340.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Vita Coco</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">The Original Coconut Water (33.8 fl oz)<br><br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 3.49</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-			<div class="card item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="assets/images/f0d1762b91fd823a1aa9bd0dab5c648d-prev-ui-340x340.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Dr Pepper</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Soft Drink 12 fl. oz<br><br><br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 2.10</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-		</div>
-	</div>
-
-</section>
+{% endfor %}
 
 <section data-bs-version="5.1" class="gallery1 cid-tD7GMWFjqe" id="agallery4-e">
-    
 
-    
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-title">
                 <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">GET SOCIAL</h3>
-                
+
             </div>
         </div>
         <div class="row card-row">
@@ -2993,36 +337,36 @@
                 <div class="card card-1 item features-image">
                     <div class="card-wrapper item-wrapper">
                         <div class="card-img-bg item-img">
-                            <img src="assets/images/rawimage-837x558.jpg" alt="">
+                            <img src="/static/assets/images/rawimage-837x558.jpg" alt="">
                         </div>
                         <div class="card-box">
                             <div class="card-box-overlay"></div>
-                            
-                            
+
+
                         </div>
                     </div>
                 </div>
                 <div class="card card-2 item features-image">
                     <div class="card-wrapper item-wrapper">
                         <div class="card-img-bg item-img">
-                            <img src="assets/images/facebook.jpg" alt="">
+                            <img src="/static/assets/images/facebook.jpg" alt="">
                         </div>
                         <div class="card-box">
                             <div class="card-box-overlay"></div>
-                            
-                            
+
+
                         </div>
                     </div>
                 </div>
                 <div class="card card-3 item features-image">
                     <div class="card-wrapper item-wrapper">
                         <div class="card-img-bg item-img">
-                            <img src="assets/images/5l6cpncsqrgczak6r5rrr2usoa-837x633.jpg" alt="">
+                            <img src="/static/assets/images/5l6cpncsqrgczak6r5rrr2usoa-837x633.jpg" alt="">
                         </div>
                         <div class="card-box">
                             <div class="card-box-overlay"></div>
-                            
-                            
+
+
                         </div>
                     </div>
                 </div>
@@ -3033,58 +377,58 @@
 
 <section data-bs-version="5.1" class="footer3 cid-tDgojewrQu" once="footers" id="footer3-1a">
 
-    
-
-    
 
     <div class="container-fluid">
         <div class="row">
             <div class="col-6 col-lg-4 media-col">
-                
+
                 <p class="brand-name mbr-fonts-style display-5">
                     © 2019 - 2023. GOLDEN DRAGON Restaurant Group inc.&nbsp;All right reserved.</p>
             </div>
             <div class="col-12 col-lg-8 text-col">
                 <div class="menu-row">
                     <ul class="foot-menu">
-                        
-                        
-                        
-                        
-                        
-                    <li class="foot-menu-item mbr-fonts-style display-7"><a href="Privacy.html" class="text-primary">Privacy Policy</a></li><li class="foot-menu-item mbr-fonts-style display-7"><a href="terms.html" class="text-primary">Terms &amp; Conditions (Updated)</a></li><li class="foot-menu-item mbr-fonts-style display-7"><a href="legal.html" class="text-primary">Contact Us</a></li></ul>
+
+
+                        <li class="foot-menu-item mbr-fonts-style display-7"><a href="Privacy.html"
+                                                                                class="text-primary">Privacy Policy</a>
+                        </li>
+                        <li class="foot-menu-item mbr-fonts-style display-7"><a href="terms.html" class="text-primary">Terms
+                            &amp; Conditions (Updated)</a></li>
+                        <li class="foot-menu-item mbr-fonts-style display-7"><a href="legal.html" class="text-primary">Contact
+                            Us</a></li>
+                    </ul>
                 </div>
                 <div class="cards-row">
                     <div class="card-item">
-                        <img src="assets/images/visa.svg" alt="">
+                        <img src="/static/assets/images/visa.svg" alt="">
                     </div>
                     <div class="card-item">
-                        <img src="assets/images/mastercard.svg" alt="">
+                        <img src="/static/assets/images/mastercard.svg" alt="">
                     </div>
                     <div class="card-item">
-                        <img src="assets/images/alipay-logo-2020.svg-90x23.png" alt="">
+                        <img src="/static/assets/images/alipay-logo-2020.svg-90x23.png" alt="">
                     </div>
                     <div class="card-item">
-                        <img src="assets/images/applepay.svg" alt="">
+                        <img src="/static/assets/images/applepay.svg" alt="">
                     </div>
                     <div class="card-item">
-                        <img src="assets/images/googlepay.svg" alt="">
+                        <img src="/static/assets/images/googlepay.svg" alt="">
                     </div>
                 </div>
-                
+
             </div>
-            
+
         </div>
     </div>
 </section>
 
 
-<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/smoothscroll/smooth-scroll.js"></script>
-  <script src="assets/ytplayer/index.js"></script>
-  <script src="assets/theme/js/script.js"></script>
-  
-  
-  
+<script src="/static/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/static/assets/smoothscroll/smooth-scroll.js"></script>
+<script src="/static/assets/ytplayer/index.js"></script>
+<script src="/static/assets/theme/js/script.js"></script>
+<script src="/static/assets/cartslider/cart.js"></script>
+
 </body>
 </html>
