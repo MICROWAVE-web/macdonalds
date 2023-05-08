@@ -55,14 +55,9 @@
 
                     <li class="nav-item d-flex">
                         <button type="button" class="btn btn-secondary rounded-pill" onclick="openNav()">
-                            <div class="display-5 mbr-bold">Корзина</div>
+                            <div style='display: flex;'class="display-5 mbr-bold">Корзина&ensp;<div id="cart_num2"></div></div>
                         </button>
-                    </li><!--
-          <li class="nav-item">
-            <a class="nav-link display-5" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link display-5" href="#">About</a> -->
+                    </li>
                     </li>
                 </ul>
             </div>
@@ -74,37 +69,41 @@
 <div id="mySidenav" class="sidenav closed">
     <div class="cart-text">
 
-        <button type="button" class="btn btn-primary rounded-pill" onclick="myCart.removeAll()">
+        <button id='clear_button' type="button" class="btn btn-primary rounded-pill" onclick="myCart.removeAll()">
             <div class="display-5 mbr-bold">Очистить корзину</div>
         </button>
 
         <div class='empty-cart' id="empty-cart">Ваша корзина пуста, пора пополнить её <span
                 class="mbri-shopping-cart"></span></div>
+        <div class="cart_card_list" id="cart_card_list">
+            <div class="cart_card">
+                <hr>
+                <div class="cart_card_img">
+                    <img class="card_img"
+                         src="media/products/2023/05/07/5jbG91ZGZyb250Lm5ldC9hM2M4Y2JiZC00ZjM3LTQwMjktODI4OC00MzEzMjY4ZDQ2OTEuanBlZw.jpg"
+                         alt="2">
+                </div>
+                <div class="card_text">
+                    <h4 class="card-title mbr-bold mbr-fonts-style display-5">Броколи</h4>
+                    <p class="mbr-text mbr-semibold mbr-fonts-style display-7">Броколи - просто и полезно.<br>
+                    </p>
+                </div>
+                <div class="bottom_card">
+                    <div class="p-2 card_count">3 шт.</div>
+                    <div class="p-2 card_remove">Удалить</div>
+                </div>
 
-        <div class="cart_card">
-            <hr>
-            <div class="cart_card_img">
-                <img class="card_img"
-                     src="media/products/2023/05/07/5jbG91ZGZyb250Lm5ldC9hM2M4Y2JiZC00ZjM3LTQwMjktODI4OC00MzEzMjY4ZDQ2OTEuanBlZw.jpg"
-                     alt="2">
-            </div>
-            <div class="card_text">
-                <h4 class="card-title mbr-bold mbr-fonts-style display-5">Броколи</h4>
-                <p class="mbr-text mbr-semibold mbr-fonts-style display-7">Броколи - просто и полезно.<br>
-                                </p>
-            </div>
-            <div class="bottom_card">
-                <div class="p-2 card_count">3 шт.</div>
-                <div class="p-2 card_remove">Удалить</div>
-            </div>
 
-            <hr>
+            </div>
         </div>
-
+        <hr>
         <div style="display: flex; width: fit-content;">
             <div>Количество товаров:&nbsp;</div>
-            <div id="cart_num">0</div>
+            <div id="cart_num"></div>
         </div>
+        <button id='cart_confirm_button' type="button" class="btn btn-secondary rounded-pill" onclick="openNav()">
+            <div style='display: flex;' class="display-5 mbr-bold">Итого:&nbsp;&nbsp;<div id="total_amount"></div>	&nbsp;Руб.</div>
+        </button>
     </div>
 </div>
 
@@ -170,6 +169,7 @@
 
 
 {% for category in categories %}
+    {% if category.products.all|length > 0 %}
     <section data-bs-version="5.1" class="header01 carm4_header01 cid-tDbPmp1i6X" id="header{{ forloop.counter }}-r">
 
         <div class="container">
@@ -241,7 +241,7 @@
         </div>
 
     </section>
-
+    {% endif %}
 {% endfor %}
 
 <section data-bs-version="5.1" class="gallery1 cid-tD7GMWFjqe" id="agallery4-e">
