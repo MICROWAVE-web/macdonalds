@@ -72,11 +72,40 @@
 </header>
 
 <div id="mySidenav" class="sidenav closed">
-  <div>
-      Тут типа выбранные товары
-      <br>
-      кол-вo <div id="cart_num">0</div>
-  </div>
+    <div class="cart-text">
+
+        <button type="button" class="btn btn-primary rounded-pill" onclick="myCart.removeAll()">
+            <div class="display-5 mbr-bold">Очистить корзину</div>
+        </button>
+
+        <div class='empty-cart' id="empty-cart">Ваша корзина пуста, пора пополнить её <span
+                class="mbri-shopping-cart"></span></div>
+
+        <div class="cart_card">
+            <hr>
+            <div class="cart_card_img">
+                <img class="card_img"
+                     src="media/products/2023/05/07/5jbG91ZGZyb250Lm5ldC9hM2M4Y2JiZC00ZjM3LTQwMjktODI4OC00MzEzMjY4ZDQ2OTEuanBlZw.jpg"
+                     alt="2">
+            </div>
+            <div class="card_text">
+                <h4 class="card-title mbr-bold mbr-fonts-style display-5">Броколи</h4>
+                <p class="mbr-text mbr-semibold mbr-fonts-style display-7">Броколи - просто и полезно.<br>
+                                </p>
+            </div>
+            <div class="bottom_card">
+                <div class="p-2 card_count">3 шт.</div>
+                <div class="p-2 card_remove">Удалить</div>
+            </div>
+
+            <hr>
+        </div>
+
+        <div style="display: flex; width: fit-content;">
+            <div>Количество товаров:&nbsp;</div>
+            <div id="cart_num">0</div>
+        </div>
+    </div>
 </div>
 
 <section data-bs-version="5.1" class="slider1 cid-tDbZ6tArCd" id="slider1-x">
@@ -138,116 +167,8 @@
         </a>
     </div>
 </section>
-<!--
-<section data-bs-version="5.1" class="header01 carm4_header01 cid-tDbVuM0rz2" id="header01-w">
 
 
-
-
-
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="mbr-white col-md-12">
-                <div class="wrap">
-
-                    <div class="mask align-center justify-content-center">
-                        <div class="wrap-text d-flex">
-                            <h1 class="mbr-section-title w-100 price mbr-bold mbr-white pb-lg-4 pb-1 mbr-fonts-style align-center display-1"></h1>
-                            <h1 class="mbr-section-title w-100 mbr-bold mbr-white pb-lg-4 pb-1 mbr-fonts-style align-center display-1">Picked for you
-<div><br></div></h1>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="pricing02 dinerm4_pricing02 cid-tDbVtzuPoS" id="pricing02-v">
-
-
-
-
-
-
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-12 pb-5 col-lg-12 align-center">
-
-
-			</div>
-			<div class="card item features-image col-12 col-md-6">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="/static/assets/images/b4facf495c22df52f3ca635379ebe613-14-prev-ui-340x272.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya//static/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Black Pepper Chicken</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">A New England Classic weighing in at about 1.25 lbs.<br>&nbsp;<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 25.50</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="card item features-image col-12 col-md-6">
-				<div class="item-wrapper align-center">
-
-					<div class="card-img">
-						<img src="/static/assets/images/5954bcb006b10dbfd0bc160f6370faf3-8-prev-ui-340x227.png" alt="">
-					</div>
-
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.99 483.96" class="product-shape-hover-img" src="http://demo.themewinter.com/wp/gloreya/wp-content/themes/gloreya//static/assets/images/menu_shape_hover.svg" alt="Quarter Onion">
-						<path stroke="lightgray" d="M235.35,0H19.64A19.61,19.61,0,0,0,0,19.59V423.24a19.62,19.62,0,0,0,19.64,19.6H53.4l-1,.09a45.89,45.89,0,0,1,32,12.15c6.73,6.28,11.46,14.52,18.55,20.4,13.23,11,34.19,11.33,47.78.79,7.07-5.49,12-13.26,18.32-19.56,8.81-8.75,21-14.67,33.42-13.73l-1.43-.14h34.23A19.62,19.62,0,0,0,255,423.24V19.59A19.61,19.61,0,0,0,235.35,0Z">
-						</path>
-					</svg>
-
-					<div class="card-box pt-4">
-
-
-
-
-						<h4 class="card-title pb-3 mbr-bold mbr-fonts-style display-5">Small Sizzling Shrimp Stir-Fry</h4>
-						<p class="mbr-text mbr-semibold mbr-fonts-style display-7">Try our new item!<br>&nbsp;<br></p>
-
-						<h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">$ 5.00</h5>
-
-
-						<span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
-
-
-					</div>
-				</div>
-			</div>
-
-
-
-
-
-
-		</div>
-	</div>
-
-</section>
- -->
 {% for category in categories %}
     <section data-bs-version="5.1" class="header01 carm4_header01 cid-tDbPmp1i6X" id="header{{ forloop.counter }}-r">
 
@@ -308,7 +229,8 @@
                                 <h5 class="price pb-4 mbr-bold mbr-fonts-style display-7">{{ product.amount }} {{ product.currency }}</h5>
 
 
-                                <span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>
+                                <span class="icon mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"
+                                      onclick="AddToCart({{ product.id }}, '{{ product.image }}', '{{ product.title }}', '{{ product.description }}', {{ product.amount }});"></span>
 
 
                             </div>

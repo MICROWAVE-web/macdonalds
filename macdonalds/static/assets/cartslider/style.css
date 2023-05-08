@@ -1,6 +1,8 @@
 .sidenav {
   margin-top: 89px;
   height: 100%;
+  max-width: 320px;
+  width: 480px;
   position: fixed;
   z-index: 19;
   top: 0;
@@ -8,16 +10,16 @@
   background-color: rgb(255, 255, 255);
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
-  box-shadow: -6px 4px 19px 0px rgba(34, 60, 80, 0.15);
+  padding: 60px 30px 30px 30px;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .closed {
-   width: 0;
+   right: -1000px;
 }
 
 .opened {
-  width: 300px;
+  right: 0;
 }
 .closed a {
    color: rgba(50, 50, 50, 0);
@@ -50,4 +52,28 @@
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+.cart-text {
+  color: #808080;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: -webkit-center;
+}
+
+.empty-cart {
+  padding: 15px 8px 15px 8px;
+  text-align: -webkit-center;
+}
+.card_img {
+  height: 100px;
+  width: auto;
+}
+
+.bottom_card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
